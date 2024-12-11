@@ -2,19 +2,19 @@
 #Creating a function and parameter is numbers
 def find_median(numbers):
     # Sort the numbers in ascending order
-    sorted_numbers = sorted(numbers)
-
+    numbers.sort()
+    
     # Find the middle index
-    n = len(sorted_numbers)
+    n = len(numbers)
     mid = n // 2
 
     # Check if the length of the list is odd or even
     if n % 2 == 0:
         # If even average two middle numbers
-        median = (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2
+        median = (numbers[mid - 1] + numbers[mid]) / 2
     else:
         # If odd take the middle number
-        median = sorted_numbers[mid]
+        median = numbers[mid]
     # return median 
     return median
 
